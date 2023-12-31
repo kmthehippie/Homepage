@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;700&family=Puppies+Play&family=WindSong:wght@400;500&display=swap');
+
+
+:root{
+    --dark-purple: rgb(38,14,52);
+    --purple: rgb(95,41,104);
+    --pink: rgb(192,103,146);
+    --peach: rgb(233,151,151);
+    --beige: rgb(245,185,154);
+    --orange: rgb(244,150,122);
+    --cursive-1: 'Puppies Play', cursive;
+    --cursive-2: 'WindSong', cursive;
+    --main-font: 'Noto Sans JP', sans-serif;
+}
+
+*,*::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--dark-purple);
+    font-family: var(--main-font);
+}
+
+/* Icons */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24,
+}
+
+ul{
+    list-style: none;
+}
+a:link, a:visited{
+    text-decoration: none;
+    color: var(--pink);
+
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.h1-div{
+    padding: 1rem;
+}
+
+h1{
+    font-family: var(--cursive-2);
+    color: var(--peach);
+    font-size: 3em;
+    font-weight: 100;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+nav li{
+    padding: 0.6rem;
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+nav .material-symbols-outlined{
+    font-size: 2rem;
+}
