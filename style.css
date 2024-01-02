@@ -5,7 +5,7 @@
 }
 
 :root{
-    --dark-purple: rgb(38,14,52);
+    --dark-purple: #07020a;
     --purple: rgba(95,41,104,1);
     --pink: rgba(192,103,146,1);
     --peach: rgba(233,151,151,1);
@@ -26,8 +26,9 @@ body{
     font-family: var(--main-font);
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: var(--dark-purple);
-    
+   
 }
 
 .main-body{
@@ -62,15 +63,17 @@ header{
     flex-direction: column;
     border-radius: 1rem;
     max-width: 100%;
+    position: relative;
 } 
 .header-div{
-    display: flex;
-    justify-content: space-between;
+    margin-top: 2rem;
+    position: relative;
 }
 .border-btm{
-    border-bottom: 1px solid var(--peach);
+    border-top: 1px solid var(--peach);
     animation: headerBtm 3s linear 0s infinite alternate;
     width: 100%;
+    margin-left: 5rem;
 }
 
 @keyframes headerBtm {
@@ -97,15 +100,27 @@ h1{
     bottom: 12%;
 }
 
-nav ul{
+nav{
+    position: fixed;
+    bottom: 0;
     display: flex;
-    justify-content: flex-end;
     margin-bottom: 2rem;
+    z-index: 1;
+}
+nav ul {
+    display: flex;
 }
 nav li{
-    padding: 0.6rem;
+    padding: 0.5rem;
+    margin: 1rem;
     text-align: center;
     font-size: 0.7rem;
+    background-color: var(--pink);
+    border-radius: 100rem;
+    width: 4.3rem;    
+}
+nav a:link, a:visited{
+    color: var(--purple);
 }
 
 nav .material-symbols-outlined{
@@ -118,8 +133,46 @@ section{
     place-items: center;
     /* align-content: center; */
     min-height: 100vh;
+    min-height: 100svh;
     max-width: 1200px;
   
+}
+
+
+/* Welcome section */
+.welcome{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.welcome-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    max-width: 600px;
+    padding: 1rem;
+}
+.welcome-header {
+    font-family: var(--main-font);
+    color: var(--peach);
+    font-size: 4rem;
+    line-height: 3.5rem
+}
+.welcome-text{
+    color: var(--pink);
+    padding-top: 1rem;
+    font-weight: 100;
+}
+.header-bg-image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100vh;
+    opacity: 50%;
+    object-fit: cover;
 }
 /* ABOUT section */
 
@@ -145,7 +198,6 @@ section{
     padding: 0.15rem;
     max-width: fit-content;
     border-radius: 100rem;
-    /* animation: imgAboutAnim 2s linear 1s forwards alternate; */
 }
 
 .img-about img{
@@ -154,27 +206,11 @@ section{
     object-fit: cover;
     border-radius: 100rem;    
 }
-/* Animation for about intro
-@keyframes imgAboutAnim{
-    from{
-        transform: translateX(-300%);
-    }
-    to{
-        transform: translateX(0);
-    }
-}
-@keyframes h2AboutAnim {
-    from{
-        transform: translateX(300%);
-    }
-    to{
-        transform: translateX(-50%);
-    }
-} */
+
 .about-bg-div{
-    background-color: rgba(62,62,74, 0.3);
+    background-color: rgba(130, 130, 151, 0.3);
     max-width: 100%;
-    box-shadow: 0.5rem 1rem rgba(0,0,0,0.2);
+    box-shadow: 0.5rem 0.5rem var(--purple);
     border-radius: 100rem;
     padding: 1rem;
     max-width: 650px;
@@ -253,14 +289,14 @@ section{
 .hidden{
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-100%);
+    /* transform: translateX(-100%); */
     transition: all 3s;
 }
 
 .show{
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0)
+    /* transform: translateX(0) */
 }
 
 /* work done etc */
@@ -307,6 +343,7 @@ section{
     align-items: center;
     padding: 0.25rem;
     width: 550px;
+    height: 600px;
 }
 
 
@@ -476,6 +513,21 @@ footer li{
 }
 
 @media (max-width: 480px){
+    .welcome-header {
+        font-size: 3rem;
+        line-height: 3.5rem
+    }
+    nav{
+        margin-bottom: 1rem;
+        z-index: 1;
+    }
+    nav li{
+        padding: 0.5rem;
+        margin: 0.5rem;
+        text-align: center;
+        font-size: 0.7rem;
+        width: 4.2rem;    
+    }
     .work-done{
         width: 90vw;
     }
@@ -515,6 +567,9 @@ footer li{
         justify-content: center;
     
     }
+    #work{
+        text-align: center;
+    }
     .img-work img{
         max-height: 80vw;
         max-width: 80vw;
@@ -528,4 +583,27 @@ footer li{
         margin: 1rem;
         object-fit: cover;
     }
+    .work-card-nav-btns{
+        margin: 1rem;
+        display: flex;
+    }
+    .button-left .material-symbols-outlined{
+        color: var(--peach);
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        background-color: var(--purple);
+        border-radius: 5rem;
+        margin-right: 2rem;
+    }
+    .button-right .material-symbols-outlined{
+        color: var(--peach);
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        background-color: var(--purple);
+        border-radius: 5rem;
+        margin-left: 2rem;
+    }
+    
 }
