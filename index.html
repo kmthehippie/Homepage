@@ -6,10 +6,14 @@
     <title>km</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
 </head>
 <body>
+    
      <!-- Next time add ts-particles to create star like effect (!after react) -->
-    <header>
+     <div class="main-body">
+<header>
+    <div class="header-div">
         <div class="h1-div">
             <h1 id="home">km</h1>
         </div>
@@ -56,73 +60,131 @@
                 </li>
             </ul>
         </nav>
+    </div>
+        
+    <div class="border-btm"></div>
     </header>
 
     
     <main>
-        <div id="about">
-            <h2>About</h2>
-            <div class="img-about">
-                <img src="./Media/cameliaciao'" alt="">
-            </div>
-            <div class="about-text">
-                <p>After spending 4 years in Dunedin, New Zealand, I graduated with a Bachelors of Pharmacy degree. This has made me somewhat proficient (but currently rusty) in all things health-science and also gifted me my most important skill. <span class="text-emphasis">I learnt how to learn well.</span><br/> I then proceeded back to my home country, Malaysia. I pursued working in my family's business where I learnt many skills. <span class="text-emphasis">This includes marketing, human resources, business management and sales. </span> <br/> Due to COVID lock-down, I found myself in a bad mental state. My family insisted I stopped working. From there,<span class="text-emphasis"> I learnt a lot about managing my mental health and the importance of it.</span>  <br/> I have since spent my days learning about web development. I have found something that piques my interest that also teaches me strong self-discipline. I am self-taught and believe that learning is a life-long process. <br/> My current arsenals currently include Vanilla Javascript, HTML and CSS. </p>
-                <div class="logo-div">
-                    <div class="js">
-                        <img src="./Media/js.png" alt="">
-                        <p>Javascript</p>
-                    </div>
-                    <div class="css">
-                        <img src="./Media/social.png" alt="">
-                        <p>CSS</p>
-                    </div>
-                    <div class="html">
-                        <img src="./Media/html.png" alt="">
-                            <p>HTML</p>
-                    </div>
+        <section class="hidden">
+            <!-- <img src="./Media/pexels-mohan-reddy-4388593.jpg" alt="" class="background"> -->
+        </section>
+        <section class="hidden">
+            <div class="about-header">
+                <h2>About</h2>
+                <div class="img-about">
+                    <img src="./Media/cameliaciao'" alt="">
                 </div>
-                <p>Outside of web dev, I am an avid <a href="https://steamcommunity.com/profiles/76561198074833071/">gamer</a>, fruit connoisseur and tarot enjoyer. My personal values are:</p>
-                <ul>
-                    <li>Kindness</li>
-                    <li>Patience</li>
-                    <li>Learning</li>
-                    <li>Growth</li>
-                    <li>Honesty</li>
-                </ul>
+            </div>
+        </section>
+
+        <section class="hidden" id="about">
+            
+            <div class="about-bg-div">
+                <div class="about-text">
+                    <p>After spending 4 years in Dunedin, New Zealand, I graduated with a Bachelors of Pharmacy degree. This has made me somewhat proficient (but currently rusty) in all things  <span class="text-emphasis">health-science </span>and also gifted me my most important skill. I learnt <span class="text-emphasis">how to learn well.</span><br/><br/> I then proceeded back to my home country, Malaysia. I pursued working in my family's business where I learnt many skills. This includes <span class="text-emphasis">marketing, human resources, business management and sales. </span> <br/> <br/>I have since spent my days learning about web development. I have found something that piques my interest that also teaches me strong self-discipline. I am self-taught and believe that learning is a life-long process. <br/><br/> My current arsenals currently include Vanilla Javascript, HTML and CSS. </p>
+                    <div class="logo-div">
+                        <div class="js logo">
+                            <img src="./Media/js.png" alt="">
+                            <p>JS</p>
+                        </div>
+                        <div class="css logo">
+                            <img src="./Media/social.png" alt="">
+                            <p>CSS</p>
+                        </div>
+                        <div class="html logo">
+                            <img src="./Media/html.png" alt="">
+                                <p>HTML</p>
+                        </div>
+                    </div>
+                    <p>Outside of web dev, I am an avid <a href="https://steamcommunity.com/profiles/76561198074833071/">gamer</a>, fruit connoisseur and tarot enjoyer. My personal values are kindness, patience, learning, growth and honesty.</p>
+                </div>
+            </div>
+                
+                
+        </section>
+
+       
+        <section class="hidden">
+        <div class="work-header">
+            <h2>Work</h2>
+            <div class="img-work">
+                <picture>
+                    <source media="(max-width: 799px)" srcset="work-1000.jpg" />
+                    <source media="(min-width: 800px)" srcset="work-2000.jpg" />
+                    <img src="work-1000.jpg" alt="">
+                </picture>
             </div>
         </div>
-        <div id="work">
-            <p>As part of my time learning via The Odin Project, these are the few projects I have attempted and completed.</p>
-            <ul>
-                <li><a href="https://kmthehippie.github.io/to-do/">To Do List</a></li>
-                <li><a href="https://kmthehippie.github.io/tarot/">WIP: Tarot Card Meanings</a></li>
-                <li><a href="https://kmthehippie.github.io/Battleship/">Battleship Game</a></li>
-                <li><a href="https://kmthehippie.github.io/Library/">Mini Library</a></li>
-                <li><a href="https://kmthehippie.github.io/RPS/">Rock Paper Scissors Game</a></li>
-                <li><a href="https://kmthehippie.github.io/Tic-tac-toe/">Tic Tac Toe Game</a></li>
-            </ul>  
-        </div>
-        <div id="connect">
-            <p>You can find me at any of these platforms to connect with me.</p>
-            <ul>
-                <li><a href="https://www.instagram.com/kmlovd/">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/km-l-1023862a7/">Linked In</a></li>
-                <li><a href="https://github.com/kmthehippie">Github</a></li>
-                <!-- Add area to insert email -->
-                <li>kmthehippie@gmail.com</li>
-            </ul>
-        </div>
+        </section>
+        
+        <section class="hidden" id="work">
+
+            <div class="work-done"></div>
+            <div class="work-card-nav-btns">
+                <div class="button-left" id="Left-Button"><span class="material-symbols-outlined">
+                keyboard_double_arrow_left
+                </span></div>
+                <p>Select the left and right buttons to view my past projects</p>
+                <div class="button-right" id="Right-Button"><span class="material-symbols-outlined">
+                keyboard_double_arrow_right
+                </span></div>
+            </div>
+        </section>
+
+        <section class="hidden">
+            <div class="connect-header">
+                <h2>Connect</h2>
+                <div class="img-connect">
+                    <picture>
+                        <source media="(max-width: 799px)" srcset="connect-low.jpg" />
+                        <source media="(min-width: 800px)" srcset="connect-high.jpg" />
+                        <img src="connect-low.jpg" alt="">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        
+        <section class="hidden" id="connect">
+
+            <div class="icon-connect">
+                <img src="./Media/ig-icon.png" alt="">
+                <a href="https://www.instagram.com/kmlovd/">Instagram</a>
+            </div>
+            <div class="icon-connect">
+                <img src="./Media/linkedin480.png" alt="">
+                <a href="https://www.linkedin.com/in/km-l-1023862a7/">Linked In</a>
+            </div>
+            <div class="icon-connect">
+                <img src="./Media/github-mark-white.png" alt="">
+                <a href="https://github.com/kmthehippie">Github</a>
+            </div>
+                
+        
+        </section>
+        
     </main>
     <footer>
 
         <div class="credits-div">
+            <div class="filler"></div>
             <ul>
+                <li>Connect Img: <a href="https://www.freepik.com/free-ai-image/top-view-retro-telephone_60197965.htm#fromView=search&term=contact+cartoon&track=ais_ai_generated&regularType=ai&page=1&position=3&uuid=317ee0d4-fdb2-4061-9f60-da0cd8ce492d">freepik</a></li>
+                <li>Work Img: <a href="https://www.freepik.com/free-ai-image/3d-computer-workstation-with-desk-room_60908444.htm#fromView=search&term=anime+work&track=ais_ai_generated&regularType=ai&page=1&position=3&uuid=ef9ff677-31c9-4306-9602-65e3e017b0b3">freepik</a></li>
                 <li>JS and HTML Icon: <a href="https://www.flaticon.com/free-icons/javascript" title="javascript icons">Freepik - Flaticon</a></li>
                 <li>CSS Icon: <a href="https://www.flaticon.com/free-icons/css3" title="css3 icons">popcornarts - Flaticon</a></li>
                 <li>Profile Picture: <a href="https://www.facebook.com/photo/?fbid=202239246073341&set=a.105047679125832" alt="Hoa sơn trà on Facebook">camelia.ciao</a></li>
-                <li>If you would like me to remove any pictures, please contact me. I will be happy to do so.</li>
+                <li>BG Pic: <a href="https://www.pexels.com/photo/northern-lights-over-mountain-and-forest-4388593/" alt="">Photo by Mohan Reddy</a></li>
+                
             </ul>
+            <div class="text-footer">
+                <p>If you would like me to remove any pictures, please contact me. I will be happy to do so.</p>
+            </div>
+            
         </div>
     </footer>
+     </div>
+    
 </body>
 </html>
